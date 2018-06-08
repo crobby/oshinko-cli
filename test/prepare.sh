@@ -44,6 +44,11 @@ function start_and_verify_openshift() {
   oc project myproject
 }
 
+function fix_travis_path() {
+  ln -s $GOPATH/src/radanalyticsio/oshinko-cli $TRAVIS_BUILD_DIR
+}
+
 setup_insecure_registry
 download_openshift
 start_and_verify_openshift
+fix_travis_path

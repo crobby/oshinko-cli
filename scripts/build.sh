@@ -16,7 +16,7 @@ go get github.com/renstrom/dedent
 go get github.com/docker/go-connections/nat
 go get github.com/ghodss/yaml
 
-PROJECT='github.com/crobby/oshinko-cli'
+PROJECT='github.com/radanalyticsio/oshinko-cli'
 TAG=`git describe --tags --abbrev=0 2> /dev/null | head -n1`
 if [ -z $TAG ]; then
     TAG='0.0.0'
