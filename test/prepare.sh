@@ -45,7 +45,7 @@ function start_and_verify_openshift() {
 }
 
 function fix_travis_path() {
-  grep -rl "github.com/radanalyticsio" . | xargs sed -i 's/github.com\/radanalyticsio/github.com\/crobby/g'
+  grep -rl "github.com/radanalyticsio/oshinko-cli" . | xargs sed -i 's#github.com/radanalyticsio/oshinko-cli#github.com/$TRAVIS_REPO_SLUG#g'
 }
 
 setup_insecure_registry
