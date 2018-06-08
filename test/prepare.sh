@@ -45,8 +45,8 @@ function start_and_verify_openshift() {
 }
 
 function fix_travis_path() {
-  ln -s $GOPATH/src/radanalyticsio/oshinko-cli $TRAVIS_BUILD_DIR
-  ls -lR /home/travis/gopath/src/github.com
+  ln -s $TRAVIS_BUILD_DIR/../.. radanalyticsio
+  ls -l /home/travis/gopath/src/github.com
 }
 
 setup_insecure_registry
