@@ -45,8 +45,7 @@ function start_and_verify_openshift() {
 }
 
 function fix_travis_path() {
-  ln -s $TRAVIS_BUILD_DIR/../.. radanalyticsio
-  ls -l /home/travis/gopath/src/github.com
+  grep -rl "github.com/radanalyticsio" . | xargs sed -i 's/github.com\/radanalyticsio/github.com\/crobby/g'
 }
 
 setup_insecure_registry
